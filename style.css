@@ -1,0 +1,45 @@
+@font-face { font-family: GlitchGoblin; src: url('fonts/GlitchGoblin-2O87v.ttf'); } 
+
+body {
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+}
+  
+.nav li {
+    float: right;
+}
+  
+.nav li a {
+    font-family: 'GlitchGoblin';
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+.nav li a:hover {
+    background-color: #342e2e;
+    color: red;
+}
+
+.nav img {
+    float: left;
+}
