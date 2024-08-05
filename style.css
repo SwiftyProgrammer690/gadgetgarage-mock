@@ -56,7 +56,7 @@ p {
 }
 
 section {
-	height: 50vh;
+	height: 100vh;
 	padding: 2em;
 	margin-top: 20px;
 	opacity: 0;
@@ -76,4 +76,29 @@ section:nth-of-type(odd) {
 
 section:nth-of-type(even) {
 	background: #e2e2e2;
+}
+
+.cursor-container {
+    position: relative;
+}
+
+.cta-button {
+    padding: 20px 40px;
+    background-color: red; /* Main color is red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('cursor.png'); /* Placeholder cursor image */
+    background-size: cover;
+    transform-origin: center;
+    pointer-events: none;
+    z-index: 1000;
 }
