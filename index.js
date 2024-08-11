@@ -33,35 +33,3 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
-const cursorContainer = document.querySelector('.cursor-container');
-const ctaButton = document.querySelector('.cta-button');
-
-// Create multiple cursors
-for (let i = 0; i < 20; i++) {
-    const cursor = document.createElement('div');
-    cursor.classList.add('cursor');
-    cursorContainer.appendChild(cursor);
-}
-
-// Function to update cursor positions
-function updateCursors(e) {
-    const cursors = document.querySelectorAll('.cursor');
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-
-    cursors.forEach((cursor, index) => {
-        const angle = (index / cursors.length) * 360;
-        const radians = angle * (Math.PI / 180);
-        const distance = 50;
-
-        const cursorX = mouseX + Math.cos(radians) * distance;
-        const cursorY = mouseY + Math.sin(radians) * distance;
-
-        cursor.style.left = `${cursorX}px`;
-        cursor.style.top = `${cursorY}px`;
-        cursor.style.transform = `rotate(${angle}deg)`;
-    });
-}
-
-document.addEventListener('mousemove', updateCursors);
-
